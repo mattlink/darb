@@ -7,14 +7,12 @@ poloniex = exchanges.POLONIEX()
 ## ~~ ## ~~ ##
 
 #kraken.assets()
-#kraken.ticker()
-print "\n"
+kraken.ticker()
 
 #poloniex.ticker()
-print "\n"
 
 gdax.ticker()
-#print "\n"
+print "\n"
 
 
 
