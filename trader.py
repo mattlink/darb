@@ -1,3 +1,4 @@
+import funcs as f
 
 class Trader:
 
@@ -10,7 +11,7 @@ class Trader:
         for exchange in exchanges:
             ###
             # add a tuple of ( exchange_name, current_price )
-            # to the price_pairs array
+            # to the price_pairs list
             #
             price_pairs.append( (exchange['name'], exchange['price']) )
 
@@ -26,19 +27,4 @@ class Trader:
 
     def verbose(self):
         pairs = self.price_pairs
-
-        low = pairs[0]
-        high = pairs[len(pairs) - 1]
-
-        diff = float(high[1]) - float(low[1])
-        
-        print "  Total Exchanges Compared: " + str(len(pairs)) + "\n\n"
-        print "--~~ Lowest Price\n "# ~~--\n"
-        print "------~~ Exchange: " + low[0] + "\n"
-        print "------~~ Price: " + low[1] + "\n"
-        print "\n"
-        print "--~~ Highest Price\n "# ~~--\n"
-        print "------~~ Exchange: " + high[0] + "\n"
-        print "------~~ Price: " + high[1] + "\n"
-        print "\n"
-        print "  Total Price Margin: $" +  str(diff)
+        f.verbose_comparison(pairs)
