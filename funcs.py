@@ -11,7 +11,7 @@ def http_get(url):
 	data = r.json()
 	return data
 
-def verbose(info):
+def verbose_ticker(info):
 	print "\n"
 	print "exchange: " + info['name']
 	print "price: " + info['price']
@@ -24,9 +24,15 @@ def verbose_comparison(pairs):
 
 	low_price = low[1]
 	high_price = high[1]
+
 	diff = float(high_price) - float(low_price)
 
+	spread = ""
+	for pair in pairs:
+		spread = spread + "$" + pair[1] + " "
+
 	print "  Total Exchanges Compared: " + str(len(pairs)) + "\n\n"
+	print "  Total Spread: " + spread + "\n"
 	print "--~~ Lowest Price\n "# ~~--\n"
 	print "------~~ Exchange: " + low[0] + "\n"
 	print "------~~ Price: " + low[1] + "\n"
