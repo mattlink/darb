@@ -14,6 +14,10 @@ try:
         # make verbose
         for exchange in exchanges:
             exchange.verbose = True
+    elif sys.argv[1] == "-q":
+        # make quiet
+        for exchange in exchanges:
+            exchange.verbose = False
 except:
     pass
 

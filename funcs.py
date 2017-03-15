@@ -1,6 +1,4 @@
 import requests
-import pprint
-pp = pprint.PrettyPrinter(indent=4)
 
 ##
 # Various Useful Functions
