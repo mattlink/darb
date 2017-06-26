@@ -1,4 +1,5 @@
 import requests
+import time
 
 ##
 # Various Useful Functions
@@ -29,8 +30,9 @@ def verbose_comparison(pairs):
 	for pair in pairs:
 		spread = spread + "$" + pair[1] + " "
 
+    	print "Time: " + str(time.time()) + "\n"
 	print "  Total Exchanges Compared: " + str(len(pairs)) + "\n\n"
-	print "  Total Spread: " + spread + "\n"
+	print "  Total Price Spread: " + spread + "\n"
 	print "--~~ Lowest Price\n "# ~~--\n"
 	print "------~~ Exchange: " + low[0] + "\n"
 	print "------~~ Price: " + low[1] + "\n"
