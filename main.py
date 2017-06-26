@@ -1,6 +1,6 @@
 import sys
 
-import exchanges
+import interface as exchanges
 import trader as t
 
 gdax = exchanges.GDAX()

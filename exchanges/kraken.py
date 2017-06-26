@@ -4,6 +4,8 @@ config.read('keys.ini')
 
 import krakenex
 
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import funcs as f
 
 class KRAKEN:

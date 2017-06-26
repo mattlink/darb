@@ -1,4 +1,6 @@
-import gdax, kraken, poloniex
+import exchanges.gdax as gdax
+import exchanges.kraken as kraken
+import exchanges.poloniex as poloniex
 
 def GDAX():
     return gdax.GDAX()
