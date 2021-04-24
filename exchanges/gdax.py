@@ -73,7 +73,7 @@ class GDAX:
                balance = wallet['balance']
 
         #print json.dumps(data, indent=2, sort_keys=True)
-        print 'GDAX BTC Balance: ' + balance
+        print('GDAX BTC Balance: ' + balance)
         return balance
 
     def send_all_coin_to_kraken(self):
@@ -90,7 +90,7 @@ class GDAX:
             "crypto_address": kraken_wallet
         }
         r = requests.post(url, json=request, auth=self.auth)
-        print json.dumps(r.json(), indent=2, sort_keys=True)
+        print(json.dumps(r.json(), indent=2, sort_keys=True))
 
 
     def get_gdax_accounts(self):
@@ -99,14 +99,14 @@ class GDAX:
         data = r.json()
 
         for i in range(0, len(data)):
-            print json.dumps(data[i], indent=2, sort_keys=True)
+            print (json.dumps(data[i], indent=2, sort_keys=True))
 
     def get_coinbase_accounts(self):
         url = self.api_url + '/coinbase-accounts'
         r = requests.get(url, auth=self.auth)
         data = r.json()
 
-        print json.dumps(data, indent=2, sort_keys=True)
+        print(json.dumps(data, indent=2, sort_keys=True))
 
 
 

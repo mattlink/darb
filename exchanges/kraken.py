@@ -51,7 +51,7 @@ class KRAKEN:
     def balance(self):
         data = self.client.query_private('Balance')
         balance = data['result']['XXBT']
-        print 'KRAKEN BTC Balance: ' + balance
+        print('KRAKEN BTC Balance: ' + balance)
         return balance
 
 

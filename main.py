@@ -7,7 +7,8 @@ gdax = exchanges.GDAX()
 kraken = exchanges.KRAKEN()
 poloniex = exchanges.POLONIEX()
 
-exchanges = [gdax, kraken, poloniex]
+#exchanges = [gdax, kraken, poloniex]
+exchanges = [gdax]
 
 try:
     if sys.argv[1] == "-v":
@@ -30,6 +31,6 @@ trader.verbose = True
 
 ## ~~ ## ~~ ##
 
-print "\n"
+print()
 trader.compare(exchange_tickers)
-print "\n"
+print()
